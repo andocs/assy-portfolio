@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="mx-auto px-2 sm:px-6 lg:px-20">
       {/* HEADER  */}
-      <header className="lg:pt-5 lg:pb-5">
+      <header className="sticky top-0 bg-[#222222] lg:pt-5">
         <div className="relative flex h-20 pb-4 flex-row justify-between border-b border-[#E0A701]">
           <div className="flex">
             <img
@@ -14,10 +14,10 @@ export default function Home() {
           </div>
           <div className="flex items-center">
             <ul className="flex flex-row space-x-6 text-[#E0A701]">
-              <a href="">
+              <a href="#main">
                 <li>HOME</li>
               </a>
-              <a href="">
+              <a href="#about">
                 <li>ABOUT</li>
               </a>
               <a href="">
@@ -37,7 +37,7 @@ export default function Home() {
       {/* SECTION 1 */}
       <section id="main">
         {/* Wrapper */}
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full h-screen flex mt-5 flex-row justify-between">
           {/* Left Column */}
           <div className="flex flex-col justify-center">
             <p className="text-xl">HELLO , I’M</p>
@@ -79,36 +79,108 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-4">
-              <button className="bg-[#E0A701] p-1 items-center justify-center text-black text-xl rounded-md w-36 flex flex-row">My Service <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg></button>
+              <button className="bg-[#E0A701] p-1 items-center justify-center text-black text-xl rounded-md w-36 flex flex-row">
+                My Service{" "}
+                <svg
+                  className="w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                </svg>
+              </button>
             </div>
           </div>
           {/* Right Column */}
           <div>
-           
-          <div className="absolute right-0">
-          <svg width="797" height="550" viewBox="0 0 797 550" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="536" y1="0.5" x2="797" y2="0.499977" stroke="url(#paint0_linear_0_1)"/>
-            <line x1="3.16695e-10" y1="549.5" x2="317" y2="549.5" stroke="url(#paint1_linear_0_1)"/>
-            <defs>
-            <linearGradient id="paint0_linear_0_1" x1="536" y1="1.5" x2="797" y2="1.49998" gradientUnits="userSpaceOnUse">
-            <stop offset="0.51" stop-color="#E0A701"/>
-            <stop offset="1" stop-color="#7A5B01"/>
-            </linearGradient>
-            <linearGradient id="paint1_linear_0_1" x1="-3.16695e-10" y1="550.5" x2="317" y2="550.5" gradientUnits="userSpaceOnUse">
-            <stop offset="0.51" stop-color="#E0A701"/>
-            <stop offset="1" stop-color="#7A5B01"/>
-            </linearGradient>
-            </defs>
-          </svg>
-          </div>
-          
-
+            {/* SVG Wrapper */}
+            <div className="absolute right-0">
+              <svg
+                width="797"
+                height="550"
+                viewBox="0 0 797 550"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="536"
+                  y1="0.5"
+                  x2="797"
+                  y2="0.499977"
+                  stroke="url(#paint0_linear_0_1)"
+                />
+                <line
+                  x1="3.16695e-10"
+                  y1="549.5"
+                  x2="250"
+                  y2="549.5"
+                  stroke="url(#paint1_linear_0_1)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_0_1"
+                    x1="536"
+                    y1="1.5"
+                    x2="797"
+                    y2="1.49998"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.51" stop-color="#E0A701" />
+                    <stop offset="1" stop-color="#7A5B01" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_0_1"
+                    x1="3.16695e-10"
+                    y1="550.5"
+                    x2="250"
+                    y2="550.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.51" stop-color="#E0A701" />
+                    <stop offset="1" stop-color="#7A5B01" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            {/* Kulot pic */}
             <img src="./assets/alyssa_main.png" alt="" />
-           
-            
-
           </div>
         </div>
+      </section>
+
+      <section id="about">
+        {/* Section Wrapper */}
+        <div className="h-screen border-t border-[#E0A701] pb-20">
+          {/* Section Header */}
+          <div className="w-full">
+            <p>FREELANCE</p>
+          </div>
+          {/* Two-Column Div Wrapper */}
+          <div className="mt-20 flex flex-row">
+            {/* Column 1 */}
+            <div className="w-1/3"><h2 className="text-5xl font-bold">ABOUT ME</h2></div>
+            {/* Column 2 */}
+            <div className="w-2/3 space-y-8">
+              <p className="text-2xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p className="text-2xl font-light">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+              <a href="" className="p-0 items-center justify-start text-[#E0A701] text-xl w-fit flex flex-row hover:border-b border-[#E0A701]">
+                Read More{" "}
+                <svg
+                  className="w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
     </main>
   );
