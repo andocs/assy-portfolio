@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <header className="mx-auto px-2 sm:px-6 lg:px-20 py-10">
+      <header className="mx-auto px-2 sm:px-6 lg:px-20 lg:pt-5 lg:pb-5">
         <div className="relative flex h-20 pb-4 flex-row justify-between border-b border-[#E0A701]">
           <div className="flex">
             <img
