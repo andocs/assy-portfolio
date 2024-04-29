@@ -1,7 +1,18 @@
 import { Josefin_Sans } from "next/font/google";
+import localFont from 'next/font/local'
+
 import "./globals.css";
 
 const josefin = Josefin_Sans({ subsets: ["latin"] });
+
+const monea = localFont({
+  src: [
+    {
+      path: '../../public/fonts/MoneaAlegante.otf'
+    },
+  ],
+  variable: '--font-monea'
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={josefin.className}>{children}</body>
+      <body className={`${josefin.className} ${monea.variable}`}>{children}</body>
     </html>
   );
 }
