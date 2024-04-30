@@ -226,7 +226,7 @@ export default function Home() {
                   {/* Computer Icon */}
                   <div className="flex justify-end">
                     <svg
-                      className="w-10"
+                      className="w-16"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -239,13 +239,13 @@ export default function Home() {
                   <div className="space-y-6">
                     {/* Website Design Header  */}
                     <div>
-                      <h1 className="text-4xl font-bold break-words">
+                      <h1 className="text-5xl font-bold break-words">
                         WEBSITE
                       </h1>
-                      <h1 className="text-4xl font-bold break-words">DESIGN</h1>
+                      <h1 className="text-5xl font-bold break-words">DESIGN</h1>
                     </div>
 
-                    <p className="text-[#906B00]">
+                    <p className="text-[#906B00] text-xl">
                       There are many elements in photography that come together
                       to make an image be considered “good”. Some of these
                       elements include, but are not limited to lighting, the
@@ -262,7 +262,7 @@ export default function Home() {
                     {/* Camera Icon */}
                     <div className="flex justify-end">
                       <svg
-                        className="w-10"
+                        className="w-16"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="rgba(53,53,53,1)"
@@ -275,12 +275,12 @@ export default function Home() {
                     <div className="space-y-6">
                       {/* Website Design Header */}
                       <div>
-                        <h1 className="text-[#383836] text-4xl font-bold break-words">
+                        <h1 className="text-[#383836] text-5xl font-bold break-words">
                           PHOTOGRAPHY
                         </h1>
                       </div>
 
-                      <p className="text-[#383836]">
+                      <p className="text-[#383836] text-xl">
                         There are many elements in photography that come
                         together to make an image be considered “good”. Some of
                         these elements include, but are not limited to lighting,
@@ -310,7 +310,7 @@ export default function Home() {
                   {/* Computer Icon */}
                   <div className="flex justify-end">
                     <svg
-                      className="w-10"
+                      className="w-16"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -323,15 +323,15 @@ export default function Home() {
                   <div className="space-y-6">
                     {/* Website Design Header  */}
                     <div>
-                      <h1 className="text-4xl font-bold break-words">
+                      <h1 className="text-5xl font-bold break-words">
                         MOBILE APP
                       </h1>
-                      <h1 className="text-4xl font-bold break-words">
+                      <h1 className="text-5xl font-bold break-words">
                         DESIGN
                       </h1>
                     </div>
 
-                    <p className="text-[#906B00]">
+                    <p className="text-[#906B00] text-xl">
                       There are many elements in photography that come
                       together to make an image be considered “good”. Some of
                       these elements include, but are not limited to lighting,
