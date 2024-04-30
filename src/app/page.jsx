@@ -218,12 +218,15 @@ export default function Home() {
               <div className="w-1/3">
                 <h2 className="text-5xl font-bold">SERVICE</h2>
               </div>
-              {/* Column 2 */}
-              <div className="columns-3">
-                <div className="bg-[#383836]">
-                  <h1>WEB DESITE</h1>
-                  <div>
+
+              {/* Cards Section */}
+              <div className="flex flex-row justify-evenly">
+                {/* Card 1 */}
+                <div className="bg-[#383836] h-96 w-96 rounded-lg flex flex-col mt-6 p-6 justify-between">
+                  {/* Computer Icon */}
+                  <div className="flex justify-end">
                     <svg
+                      className="w-10"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -231,9 +234,32 @@ export default function Home() {
                       <path d="M4 5V16H20V5H4ZM2 4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V18H2V4.00748ZM1 19H23V21H1V19Z"></path>
                     </svg>
                   </div>
+
+                  {/* Text Group */}
+                  <div className="space-y-6">
+                    {/* Website Design Header  */}
+                    <div>
+                      <h1 className="text-4xl font-bold break-words">
+                        WEBSITE
+                      </h1>
+                      <h1 className="text-4xl font-bold break-words">DESIGN</h1>
+                    </div>
+
+                    <p className="text-[#906B00]">
+                      There are many elements in photography that come together
+                      to make an image be considered “good”. Some of these
+                      elements include, but are not limited to lighting, the
+                      rule of thirds, lines, shapes, texture, patterns, and
+                      color.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-[#E0A701] text-[#383836]">PHOTOGRAPHY</div>
-                <div className="bg-[#383836]">MOBILE APP DESIGN</div>
+
+                <div className="bg-[#E0A701] h-96 w-[32rem] text-[#383836]">
+                  PHOTOGRAPHY
+                </div>
+
+                <div className="bg-[#383836] h-96 w-96">MOBILE APP DESIGN</div>
               </div>
             </div>
           </div>
