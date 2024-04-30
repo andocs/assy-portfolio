@@ -155,13 +155,13 @@ export default function Home() {
 
       <section id="about" className="scroll-mt-[6.5rem]">
         {/* Section Wrapper */}
-        <div className="h-screen justify-center flex flex-col">
+        <div className="h-screen flex flex-col justify-evenly">
           {/* Section Header */}
           <div className="w-full border-t border-[#E0A701]">
             <p>FREELANCE</p>
           </div>
           {/* Two-Column Div Wrapper */}
-          <div className="pt-20 flex flex-row h-full">
+          <div className="flex flex-row">
             {/* Column 1 */}
             <div className="w-1/3"><h2 className="text-5xl font-bold">ABOUT ME</h2></div>
             {/* Column 2 */}
@@ -184,6 +184,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section id="service" className="scroll-mt-[6.5rem]">
         {/* Section Wrapper */}
         <div className="h-screen pb-20">
