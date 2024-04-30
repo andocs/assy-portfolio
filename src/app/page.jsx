@@ -36,7 +36,7 @@ export default function Home() {
 
     {/* CONTENT */}
     <main className="mx-auto px-2 sm:px-6 lg:px-20">     
-      {/* SECTION 1 */}
+      {/* SECTION 1 - MAIN */}
       <section id="main" className="border-t border-[#E0A701] scroll-mt-32">
         {/* Wrapper */}
         <div className="mt-6">
@@ -153,7 +153,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="scroll-mt-[6.5rem]">
+      {/* SECTION 2 - ABOUT */}
+      <section id="about" className="scroll-mt-0.5">
         {/* Section Wrapper */}
         <div className="h-screen flex flex-col justify-evenly">
           {/* Section Header */}
@@ -185,6 +186,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 3 - SERVICE */}
       <section id="service" className="scroll-mt-[6.5rem]">
         {/* Section Wrapper */}
         <div className="h-screen pb-20">
