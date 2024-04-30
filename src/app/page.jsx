@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="mx-auto px-2 sm:px-6 lg:px-20">
-      {/* HEADER  */}
-      <header className="sticky top-0 bg-[#222222] lg:pt-5">
-        <div className="relative flex h-20 pb-4 flex-row justify-between border-b border-[#E0A701]">
+    <>
+     {/* HEADER  */}
+    <header id="nav" className="sticky w-full top-0 bg-[#222222] lg:pt-5 z-50 px-2 sm:px-6 lg:px-20">
+        <div className="relative flex h-20 pb-4 flex-row justify-between">
           <div className="flex">
             <img
               src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NeAYXOOtWjCaak6eZ4LPNtLBuNxrLZ00gtYuogFSar3CpxbyRiwHmGgrmj-Y0quuU79o8U8erzdZvz00JmcYXXBSbeNznjlsjsGW0d37rMaRNN-rm~MCskQ5fbHyCsRromglHQbuNDpQx-Y9auusq6sSX4k0mpVuwooL7pM5s1jnYni6ujbEwcQ6Q0y31HgjHfrXzjrmM-X6~c8~l4Z0Umzvn6ok-y6XJB~oo0QA54XbRrEC653O0-xBR6NDUMeL0n1QiEPa5ES7l1OdEXZx3imeHJx3Wr90pSdKXgnVymPXFEmkxbGC3Pu3B9fOaPCLez9Po8Gqsff4kuS9wa3BYQ__"
@@ -32,12 +32,15 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </header>
+    </header>
 
+    {/* CONTENT */}
+    <main className="mx-auto px-2 sm:px-6 lg:px-20">     
       {/* SECTION 1 */}
-      <section id="main">
+      <section id="main" className="border-t border-[#E0A701] scroll-mt-32">
         {/* Wrapper */}
-        <div className="w-full h-screen flex mt-5 flex-row justify-between">
+        <div className="mt-6">
+        <div className="w-full h-screen flex flex-row justify-between">
           {/* Left Column */}
           <div className="flex flex-col justify-center">
             <p className="text-xl">HELLO , I’M</p>
@@ -93,7 +96,7 @@ export default function Home() {
             </div>
           </div>
           {/* Right Column */}
-          <div>
+          <div className="relative">
             {/* SVG Wrapper */}
             <div className="absolute right-0">
               <svg
@@ -126,8 +129,8 @@ export default function Home() {
                     y2="1.49998"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0.51" stop-color="#E0A701" />
-                    <stop offset="1" stop-color="#7A5B01" />
+                    <stop offset="0.51" stopColor="#E0A701" />
+                    <stop offset="1" stopColor="#7A5B01" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_0_1"
@@ -137,8 +140,8 @@ export default function Home() {
                     y2="550.5"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0.51" stop-color="#E0A701" />
-                    <stop offset="1" stop-color="#7A5B01" />
+                    <stop offset="0.51" stopColor="#E0A701" />
+                    <stop offset="1" stopColor="#7A5B01" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -147,13 +150,14 @@ export default function Home() {
             <img src="./assets/alyssa_main.png" alt="" />
           </div>
         </div>
+        </div>
       </section>
 
-      <section id="about">
+      <section id="about" className="scroll-mt-[6.5rem]">
         {/* Section Wrapper */}
-        <div className="h-screen border-t border-[#E0A701] pb-20">
+        <div className="h-screen pb-20">
           {/* Section Header */}
-          <div className="w-full">
+          <div className="w-full border-t border-[#E0A701]">
             <p>FREELANCE</p>
           </div>
           {/* Two-Column Div Wrapper */}
@@ -183,5 +187,6 @@ export default function Home() {
 
       </section>
     </main>
+    </>
   );
 }
