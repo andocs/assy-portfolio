@@ -87,14 +87,16 @@ export default function Home() {
                 <div className="mt-4">
                   <button className="bg-[#E0A701] p-1 items-center justify-center text-black text-xl rounded-md w-36 flex flex-row">
                     My Service{" "}
-                    <svg
-                      className="w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
-                    </svg>
+                    <a href="#service">
+                      <svg
+                        className="w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                      </svg>
+                    </a>
                   </button>
                 </div>
               </div>
@@ -291,17 +293,17 @@ export default function Home() {
                   </div>
                   {/* Button */}
                   <div className="mt-6 w-full flex justify-center items-center space-x-6">
-                  <button className="bg-[#E0A701] py-3 px-5 justify-center text-black text-xl rounded-md w-auto flex flex-row">
-                    BOOK SERVICE{" "}
-                    <svg
-                      className="w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
-                    </svg>
-                  </button>
+                    <button className="bg-[#E0A701] py-3 px-5 justify-center text-black text-xl rounded-md w-auto flex flex-row">
+                      BOOK SERVICE{" "}
+                      <svg
+                        className="w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                      </svg>
+                    </button>
                   </div>
                 </div>
 
@@ -326,20 +328,18 @@ export default function Home() {
                       <h1 className="text-5xl font-bold break-words">
                         MOBILE APP
                       </h1>
-                      <h1 className="text-5xl font-bold break-words">
-                        DESIGN
-                      </h1>
+                      <h1 className="text-5xl font-bold break-words">DESIGN</h1>
                     </div>
 
                     <p className="text-[#906B00] text-xl">
-                      There are many elements in photography that come
-                      together to make an image be considered “good”. Some of
-                      these elements include, but are not limited to lighting,
-                      the rule of thirds, lines, shapes, texture, patterns,
-                      and color.
+                      There are many elements in photography that come together
+                      to make an image be considered “good”. Some of these
+                      elements include, but are not limited to lighting, the
+                      rule of thirds, lines, shapes, texture, patterns, and
+                      color.
                     </p>
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
