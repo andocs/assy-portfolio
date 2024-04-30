@@ -184,17 +184,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section id="service" className="scroll-mt-[6.5rem]">
         {/* Section Wrapper */}
         <div className="h-screen pb-20">
-          {/* Section Header */}
-
           {/* Two-Column Div Wrapper */}
-          <div className="mt-20 flex flex-row">
+          <div className="mt-20 flex flex-col">
             {/* Column 1 */}
             <div className="w-1/3"><h2 className="text-5xl font-bold">SERVICE</h2></div>
             {/* Column 2 */}
-            <div className="columns-3"></div>
+            <div className="columns-3">
+              <div className="bg-[#383836]">WEB DESITE</div>
+              <div className="bg-[#E0A701] text-[#383836]">PHOTOGRAPHY</div>
+              <div className="bg-[#383836]">MOBILE APP DESIGN</div>
+            </div>
 
           </div>
 
