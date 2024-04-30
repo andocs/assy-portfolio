@@ -222,7 +222,7 @@ export default function Home() {
               {/* Cards Section */}
               <div className="flex flex-row mt-4 justify-evenly space-x-16">
                 {/* Card 1 */}
-                <div className="bg-[#383836] min-h-[500px] h-[500px] mt-6 rounded-lg flex flex-col p-6 justify-between">
+                <div className="bg-[#383836] min-h-[500px] h-[500px] w-auto mt-6 rounded-lg flex flex-col p-6 justify-between">
                   {/* Computer Icon */}
                   <div className="flex justify-end">
                     <svg
@@ -256,7 +256,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 Wrapper */}
-                <div className="flex flex-col w-full relative h-full justify-evenly">
+                <div className="flex flex-col w-auto relative h-full justify-evenly">
                   {/* Card 2 */}
                   <div className="bg-[#E0A701] min-h-[550px] rounded-lg flex flex-col p-6 justify-between">
                     {/* Camera Icon */}
@@ -306,7 +306,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-[#383836] min-h-[500px] h-[500px] mt-6 rounded-lg flex flex-col p-6 justify-between">
+                <div className="bg-[#383836] min-h-[500px] h-[500px] w-auto mt-6 rounded-lg flex flex-col p-6 justify-between">
                   {/* Computer Icon */}
                   <div className="flex justify-end">
                     <svg
