@@ -160,13 +160,13 @@ export default function Home() {
 
         <section id="about" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="h-screen flex flex-col justify-evenly">
+          <div className="h-screen flex flex-col">
             {/* Section Header */}
             <div className="w-full border-t border-[#E0A701]">
               <p>FREELANCE</p>
             </div>
             {/* Two-Column Div Wrapper */}
-            <div className="flex flex-row">
+            <div className="flex flex-row my-auto">
               {/* Column 1 */}
               <div className="w-1/3">
                 <h2 className="text-5xl font-bold">ABOUT ME</h2>
@@ -238,7 +238,7 @@ export default function Home() {
                   </div>
 
                   {/* Text Group */}
-                  <div className="space-y-6">
+                  <div className="space-y-6 pb-10">
                     {/* Website Design Header  */}
                     <div>
                       <h1 className="text-5xl font-bold break-words">
@@ -274,15 +274,15 @@ export default function Home() {
                     </div>
 
                     {/* Text Group */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 pb-14">
                       {/* Website Design Header */}
                       <div>
-                        <h1 className="text-[#383836] text-5xl font-bold break-words">
+                        <h1 className="text-[#383836] text-6xl font-bold break-words">
                           PHOTOGRAPHY
                         </h1>
                       </div>
 
-                      <p className="text-[#383836] text-xl">
+                      <p className="text-[#383836] text-2xl font-semibold w-11/12">
                         There are many elements in photography that come
                         together to make an image be considered “good”. Some of
                         these elements include, but are not limited to lighting,
@@ -322,7 +322,7 @@ export default function Home() {
                   </div>
 
                   {/* Text Group */}
-                  <div className="space-y-6">
+                  <div className="space-y-6 pb-10">
                     {/* Website Design Header  */}
                     <div>
                       <h1 className="text-5xl font-bold break-words">
