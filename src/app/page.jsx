@@ -23,7 +23,7 @@ export default function Home() {
               <a href="">
                 <li>PROJECT</li>
               </a>
-              <a href="">
+              <a href="#service">
                 <li>SERVICE</li>
               </a>
               <a href="">
@@ -180,6 +180,21 @@ export default function Home() {
                 </svg>
               </a>
             </div>
+
+          </div>
+        </div>
+      </section>
+      <section id="service" className="scroll-mt-[6.5rem]">
+        {/* Section Wrapper */}
+        <div className="h-screen pb-20">
+          {/* Section Header */}
+
+          {/* Two-Column Div Wrapper */}
+          <div className="mt-20 flex flex-row">
+            {/* Column 1 */}
+            <div className="w-1/3"><h2 className="text-5xl font-bold">SERVICE</h2></div>
+            {/* Column 2 */}
+            <div className="columns-3"></div>
 
           </div>
 
