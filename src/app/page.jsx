@@ -192,7 +192,7 @@ export default function Home() {
                 </p>
                 <a
                   href=""
-                  className="p-0 items-center justify-start text-[#E0A701] text-xl w-fit flex flex-row hover:border-b border-[#E0A701]"
+                  className="p-0 items-center justify-start text-[#E0A701] text-xl w-fit flex flex-row relative after:bg-[#E0A701] after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 "
                 >
                   Read More{" "}
                   <svg
