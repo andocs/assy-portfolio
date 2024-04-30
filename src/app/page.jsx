@@ -220,9 +220,9 @@ export default function Home() {
               </div>
 
               {/* Cards Section */}
-              <div className="flex flex-row justify-evenly">
+              <div className="flex flex-row mt-4 justify-evenly space-x-16">
                 {/* Card 1 */}
-                <div className="bg-[#383836] h-96 w-96 rounded-lg flex flex-col mt-6 p-6 justify-between">
+                <div className="bg-[#383836] min-h-[500px] h-[500px] mt-6 rounded-lg flex flex-col p-6 justify-between">
                   {/* Computer Icon */}
                   <div className="flex justify-end">
                     <svg
@@ -255,10 +255,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Card Section */}
-                <div className="flex flex-row justify-evenly">
+                {/* Card 2 Wrapper */}
+                <div className="flex flex-col w-full relative h-full justify-evenly">
                   {/* Card 2 */}
-                  <div className="bg-[#E0A701] h-96 w-96 rounded-lg flex flex-col mt-6 p-6 justify-between">
+                  <div className="bg-[#E0A701] min-h-[550px] rounded-lg flex flex-col p-6 justify-between">
                     {/* Camera Icon */}
                     <div className="flex justify-end">
                       <svg
@@ -289,46 +289,57 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
-
-                {/* Cards Section */}
-                <div className="flex flex-row justify-evenly">
-                  {/* Card 3 */}
-                  <div className="bg-[#383836] h-96 w-96 rounded-lg flex flex-col mt-6 p-6 justify-between">
-                    {/* Computer Icon */}
-                    <div className="flex justify-end">
-                      <svg
-                        className="w-10"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path>
-                      </svg>
-                    </div>
-
-                    {/* Text Group */}
-                    <div className="space-y-6">
-                      {/* Website Design Header  */}
-                      <div>
-                        <h1 className="text-4xl font-bold break-words">
-                          MOBILE APP
-                        </h1>
-                        <h1 className="text-4xl font-bold break-words">
-                          DESIGN
-                        </h1>
-                      </div>
-
-                      <p className="text-[#906B00]">
-                        There are many elements in photography that come
-                        together to make an image be considered “good”. Some of
-                        these elements include, but are not limited to lighting,
-                        the rule of thirds, lines, shapes, texture, patterns,
-                        and color.
-                      </p>
-                    </div>
+                  {/* Button */}
+                  <div className="mt-6 w-full flex justify-center items-center space-x-6">
+                  <button className="bg-[#E0A701] py-3 px-5 justify-center text-black text-xl rounded-md w-auto flex flex-row">
+                    BOOK SERVICE{" "}
+                    <svg
+                      className="w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                    </svg>
+                  </button>
                   </div>
                 </div>
+
+                {/* Card 3 */}
+                <div className="bg-[#383836] min-h-[500px] h-[500px] mt-6 rounded-lg flex flex-col p-6 justify-between">
+                  {/* Computer Icon */}
+                  <div className="flex justify-end">
+                    <svg
+                      className="w-10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path>
+                    </svg>
+                  </div>
+
+                  {/* Text Group */}
+                  <div className="space-y-6">
+                    {/* Website Design Header  */}
+                    <div>
+                      <h1 className="text-4xl font-bold break-words">
+                        MOBILE APP
+                      </h1>
+                      <h1 className="text-4xl font-bold break-words">
+                        DESIGN
+                      </h1>
+                    </div>
+
+                    <p className="text-[#906B00]">
+                      There are many elements in photography that come
+                      together to make an image be considered “good”. Some of
+                      these elements include, but are not limited to lighting,
+                      the rule of thirds, lines, shapes, texture, patterns,
+                      and color.
+                    </p>
+                  </div>
+                </div> 
               </div>
             </div>
           </div>
