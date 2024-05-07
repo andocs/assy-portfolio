@@ -23,11 +23,11 @@ export default function Home() {
               <a href="#about">
                 <li>ABOUT</li>
               </a>
-              <a href="">
-                <li>PROJECT</li>
-              </a>
               <a href="#service">
                 <li>SERVICE</li>
+              </a>
+              <a href="#project">
+                <li>PROJECT</li>
               </a>
               <a href="">
                 <li>CONTACT</li>
@@ -39,12 +39,12 @@ export default function Home() {
 
       {/* CONTENT */}
       <main className="mx-auto px-2 sm:px-6 lg:px-20">
-        {/* SECTION 1 */}
+        {/* MAIN SECTION */}
         <section id="main" className="border-t border-[#E0A701] scroll-mt-32">
           {/* Wrapper */}
           <div className="mt-6">
             <div className="w-full h-screen flex flex-row justify-between">
-              {/* Left Column */}
+              {/* Left Column - Name with Social Media */}
               <div className="flex flex-col justify-center">
                 <p className="text-xl">HELLO , I’M</p>
                 <p className="font-monea text-9xl">Alyssa Gerez</p>
@@ -84,6 +84,7 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
+                {/* BUTTON */}
                 <div className="mt-4">
                   <button className="bg-[#E0A701] p-1 items-center justify-center text-black text-xl rounded-md w-36 flex flex-row">
                     My Service{" "}
@@ -158,6 +159,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ABOUT SECTION */}
         <section id="about" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
           <div className="h-screen flex flex-col">
@@ -167,11 +169,11 @@ export default function Home() {
             </div>
             {/* Two-Column Div Wrapper */}
             <div className="flex flex-row my-auto">
-              {/* Column 1 */}
+              {/* Column 1 - About Me*/}
               <div className="w-1/3">
                 <h2 className="text-5xl font-bold">ABOUT ME</h2>
               </div>
-              {/* Column 2 */}
+              {/* Column 2 - Description*/}
               <div className="w-2/3 space-y-8">
                 <p className="text-2xl font-light">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -211,12 +213,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SERVICE SECTION */}
         <section id="service" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="h-screen pb-20">
-            {/* Two-Column Div Wrapper */}
-            <div className="mt-20 flex flex-col">
-              {/* Column 1 */}
+          <div className="h-screen">
+            {/* Card Section Wrapper */}
+            <div className="flex flex-col pb-20 border-b border-[#E0A701]">
+              {/* Header - Service */}
               <div className="w-1/3">
                 <h2 className="text-5xl font-bold">SERVICE</h2>
               </div>
@@ -323,7 +326,7 @@ export default function Home() {
 
                   {/* Text Group */}
                   <div className="space-y-6 pb-10">
-                    {/* Website Design Header  */}
+                    {/* Card Header */}
                     <div>
                       <h1 className="text-5xl font-bold break-words">
                         MOBILE APP
@@ -340,6 +343,76 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PROJECT SECTION */}
+        <section id="project" className="scroll-mt-[6.5rem]">
+          {/* Section Wrapper */}
+          <div className="h-screen">
+            {/* Section Header */}
+            <div className="w-full">
+              <h2 className="text-5xl font-bold">MY PROJECT</h2>
+            </div>
+            {/* Two-Row Wrapper */}
+            <div className="flex flex-col space-y-12">
+              {/* Row 1 - Web and Mobile App Design  */}
+              <div>
+                {/* Row 1 Header Wrapper  */}
+                <div className="flex flex-row w-full justify-center text-2xl pb-10">
+                  <p>Website and Mobile Application Design</p>
+                </div>
+                {/* Row 1 Image Wrapper */}
+                <div className="grid grid-cols-3 justify-center items-center">
+                  <img
+                    className="object-cover w-full h-full"
+                    src="assets/design_1.png"
+                    alt=""
+                  />
+                  <img
+                    className="object-cover w-full h-full"
+                    src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pT3Zil8LsPatvCbz0~~1uZgDFXxJy5o0UwSD~qGzMrHQl4qWM9pyn5cY1pnKDur9Z91WxGSxvuak5FUeZqpTa8Ia8QN5TyJ~YjVTSOo~01bbtZ6eAwkE62Z-PxXuzRffryEjMjjpLxok8HAzp8x00qZ9Zy3-rc3P3E0DjT8pYMlInQVLDqqUU7OHhZ0jbQ5HvYzG2T8mj4~VW6KWkoD5kVkO0dv41uswqGdVzlFX78prUzKZnf1MEFm9xhe9Q0k20ynSlHNaUwkePoqtAqGI~jryPgAY8vQtswmJfGCIZkjlYOtscTLLvYJm07zqxMza7wIvxcY88IlI1~OJHuHr9g__"
+                    alt=""
+                    sizes=""
+                    srcset=""
+                  />
+                  <img
+                    className="object-cover w-full h-full  pl-6"
+                    src="assets/design_3.png"
+                    alt=""
+                  />
+                </div>
+                
+              </div>
+              {/* Row 2 - Photography  */}
+              <div>
+                {/* Row 2 Header Wrapper  */}
+                <div className="flex flex-row w-full justify-center text-2xl pb-10">
+                  <p>Photography</p>
+                </div>
+                {/* Row 2 Image Wrapper */}
+                <div className="grid grid-cols-3 justify-center items-center">
+                  <img
+                    className="object-cover w-full h-full"
+                    src="assets/design_1.png"
+                    alt=""
+                  />
+                  <img
+                    className="object-cover w-full h-full"
+                    src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pT3Zil8LsPatvCbz0~~1uZgDFXxJy5o0UwSD~qGzMrHQl4qWM9pyn5cY1pnKDur9Z91WxGSxvuak5FUeZqpTa8Ia8QN5TyJ~YjVTSOo~01bbtZ6eAwkE62Z-PxXuzRffryEjMjjpLxok8HAzp8x00qZ9Zy3-rc3P3E0DjT8pYMlInQVLDqqUU7OHhZ0jbQ5HvYzG2T8mj4~VW6KWkoD5kVkO0dv41uswqGdVzlFX78prUzKZnf1MEFm9xhe9Q0k20ynSlHNaUwkePoqtAqGI~jryPgAY8vQtswmJfGCIZkjlYOtscTLLvYJm07zqxMza7wIvxcY88IlI1~OJHuHr9g__"
+                    alt=""
+                    sizes=""
+                    srcset=""
+                  />
+                  <img
+                    className="object-cover w-full h-full  pl-6"
+                    src="assets/design_3.png"
+                    alt=""
+                  />
+                </div>
+                
               </div>
             </div>
           </div>
