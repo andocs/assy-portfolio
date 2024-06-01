@@ -29,7 +29,7 @@ export default function Home() {
               <a href="#project">
                 <li>PROJECT</li>
               </a>
-              <a href="">
+              <a href="#contact">
                 <li>CONTACT</li>
               </a>
             </ul>
@@ -38,12 +38,12 @@ export default function Home() {
       </header>
 
       {/* CONTENT */}
-      <main className="mx-auto px-2 sm:px-6 lg:px-20">
+      <main className="relative mx-auto px-2 sm:px-6 lg:px-20 overflow-hidden">
         {/* MAIN SECTION */}
         <section id="main" className="border-t border-[#E0A701] scroll-mt-32">
           {/* Wrapper */}
           <div className="mt-6">
-            <div className="w-full h-screen flex flex-row justify-between">
+            <div className="w-full min-h-screen flex flex-row justify-between">
               {/* Left Column - Name with Social Media */}
               <div className="flex flex-col justify-center">
                 <p className="text-xl">HELLO , I’M</p>
@@ -162,7 +162,7 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section id="about" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="h-screen flex flex-col">
+          <div className="min-h-screen flex flex-col">
             {/* Section Header */}
             <div className="w-full border-t border-[#E0A701]">
               <p>FREELANCE</p>
@@ -216,7 +216,7 @@ export default function Home() {
         {/* SERVICE SECTION */}
         <section id="service" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="h-screen">
+          <div className="min-h-screen">
             {/* Card Section Wrapper */}
             <div className="flex flex-col pb-20 border-b border-[#E0A701]">
               {/* Header - Service */}
@@ -349,9 +349,9 @@ export default function Home() {
         </section>
 
         {/* PROJECT SECTION */}
-        <section id="project" className="scroll-mt-[6.5rem]">
+        <section id="project" className="scroll-mt-[9rem]">
           {/* Section Wrapper */}
-          <div className="h-screen">
+          <div className="min-h-screen">
             {/* Section Header */}
             <div className="w-full">
               <h2 className="text-5xl font-bold">MY PROJECT</h2>
@@ -365,59 +365,138 @@ export default function Home() {
                   <p>Website and Mobile Application Design</p>
                 </div>
                 {/* Row 1 Image Wrapper */}
-                <div className="grid grid-cols-3 justify-center items-center">
-                  <img
-                    className="object-cover w-full h-full"
-                    src="assets/design_1.png"
-                    alt=""
-                  />
-                  <img
-                    className="object-cover w-full h-full"
-                    src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pT3Zil8LsPatvCbz0~~1uZgDFXxJy5o0UwSD~qGzMrHQl4qWM9pyn5cY1pnKDur9Z91WxGSxvuak5FUeZqpTa8Ia8QN5TyJ~YjVTSOo~01bbtZ6eAwkE62Z-PxXuzRffryEjMjjpLxok8HAzp8x00qZ9Zy3-rc3P3E0DjT8pYMlInQVLDqqUU7OHhZ0jbQ5HvYzG2T8mj4~VW6KWkoD5kVkO0dv41uswqGdVzlFX78prUzKZnf1MEFm9xhe9Q0k20ynSlHNaUwkePoqtAqGI~jryPgAY8vQtswmJfGCIZkjlYOtscTLLvYJm07zqxMza7wIvxcY88IlI1~OJHuHr9g__"
-                    alt=""
-                    sizes=""
-                    srcset=""
-                  />
-                  <img
-                    className="object-cover w-full h-full  pl-6"
-                    src="assets/design_3.png"
-                    alt=""
-                  />
+                <div className="grid grid-cols-3 justify-center items-center gap-5">
+                  <div className="w-full h-full bg-[url('/assets/img1-bg.jfif')] bg-cover">
+                    <img
+                      className="object-cover w-full h-full"
+                      src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="w-full h-full">
+                    <img
+                      className="object-cover w-full h-full"
+                      src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
+                      alt=""
+                      sizes=""
+                      srcset=""
+                    />
+                  </div>
+
+                  <div className="w-full h-full bg-[url('/assets/img2-bg.jfif')] bg-cover">
+                    <img
+                      className="object-cover w-full h-full pl-6"
+                      src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                
               </div>
               {/* Row 2 - Photography  */}
-              <div>
+              <div className="pb-28">
                 {/* Row 2 Header Wrapper  */}
                 <div className="flex flex-row w-full justify-center text-2xl pb-10">
                   <p>Photography</p>
                 </div>
                 {/* Row 2 Image Wrapper */}
-                <div className="grid grid-cols-3 justify-center items-center">
-                  <img
-                    className="object-cover w-full h-full"
-                    src="assets/design_1.png"
-                    alt=""
-                  />
-                  <img
-                    className="object-cover w-full h-full"
-                    src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pT3Zil8LsPatvCbz0~~1uZgDFXxJy5o0UwSD~qGzMrHQl4qWM9pyn5cY1pnKDur9Z91WxGSxvuak5FUeZqpTa8Ia8QN5TyJ~YjVTSOo~01bbtZ6eAwkE62Z-PxXuzRffryEjMjjpLxok8HAzp8x00qZ9Zy3-rc3P3E0DjT8pYMlInQVLDqqUU7OHhZ0jbQ5HvYzG2T8mj4~VW6KWkoD5kVkO0dv41uswqGdVzlFX78prUzKZnf1MEFm9xhe9Q0k20ynSlHNaUwkePoqtAqGI~jryPgAY8vQtswmJfGCIZkjlYOtscTLLvYJm07zqxMza7wIvxcY88IlI1~OJHuHr9g__"
-                    alt=""
-                    sizes=""
-                    srcset=""
-                  />
-                  <img
-                    className="object-cover w-full h-full  pl-6"
-                    src="assets/design_3.png"
-                    alt=""
-                  />
+                <div className="grid grid-cols-3 justify-center items-center gap-5">
+                  <div className="w-full h-full bg-[url('/assets/img1-bg.jfif')] bg-cover">
+                    <img
+                      className="object-cover w-full h-full"
+                      src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="w-full h-full">
+                    <img
+                      className="object-cover w-full h-full"
+                      src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
+                      alt=""
+                      sizes=""
+                      srcset=""
+                    />
+                  </div>
+
+                  <div className="w-full h-full bg-[url('/assets/img2-bg.jfif')] bg-cover">
+                    <img
+                      className="object-cover w-full h-full pl-6"
+                      src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                
               </div>
             </div>
           </div>
         </section>
+
+        {/* CONTACT SECTION */}
+        <section id="contact" className="scroll-mt-[6.5rem]">
+          {/* Section Wrapper */}
+          <div className="flex w-full border-t border-[#E0A701]">
+            {/* Two-Row Wrapper */}
+            <div className="flex w-full flex-col gap-4 px-10">
+              {/* Row 1 Wrapper */}
+              <div className="flex justify-between pt-10">
+                {/* Column 1 Wrapper */}
+                <div className="w-1/3 flex items-center">
+                  <h2 className="text-5xl">Contact Us</h2>
+                </div>
+                {/* Column 2 Wrapper */}
+                <div className="w-2/3 flex gap-10 px-5">
+                  {/* Text Group 1 Wrapper */}
+                  <div className="flex flex-col w-full gap-4">
+                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" id="name" placeholder="Name" />
+                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"  type="email" id="email" placeholder="E-Mail" />
+                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" inputmode="numeric" id="phone" placeholder="Phone Number" />
+                  </div>
+                  {/* Text Group 2 */}
+                  <div className="w-full h-full">
+                    <textarea className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto bg-[#363131] rounded-md py-3 px-4 w-full h-full resize-none" name="message" id="message" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+              {/* Row 2 */}
+              <div className="w-full flex pr-5 justify-end pb-24">
+                <button className="font-roboto font-light bg-[#E0A701] text-black px-8 py-1 rounded-md">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <img className="absolute -bottom-28 -left-40 -z-10 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
       </main>
+
+      {/* FOOTER */}
+      <footer className="w-full bg-[#4F3B00] h-20">
+        {/* FOOTER WRAPPER */}
+        <div className="flex h-full justify-center items-center gap-20">
+          {/* E-MAIL */}
+          <div className="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path></svg>
+            <p className="font-roboto font-light opacity-50">yssagerez15@gmail.com</p>
+          </div>
+          {/* INSTAGRAM */}
+          <div className="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"></path><circle cx="11.994" cy="11.979" r="3.003"></circle></svg>
+            <p className="font-roboto font-light opacity-50">@yssacreatives / uiyssacreative</p>
+          </div>
+          {/* FACEBOOK */}
+          <div className="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>
+            <p className="font-roboto font-light opacity-50">Yssa Creatives</p>
+          </div>
+          {/* PHONE */}
+          <div className="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"></path></svg>
+            <p className="font-roboto font-light opacity-50">09062428185 / 09760535896</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

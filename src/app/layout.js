@@ -1,9 +1,12 @@
 import { Josefin_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
+
 import localFont from 'next/font/local'
 
 import "./globals.css";
 
 const josefin = Josefin_Sans({ subsets: ["latin"] });
+const roboto = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ["latin"], variable: '--font-roboto' });
 
 const monea = localFont({
   src: [
@@ -21,8 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${josefin.className} ${monea.variable}`}>{children}</body>
+    <html lang="en" className="scroll-smooth josefin">
+      <body className={`${josefin.className} ${roboto.variable} ${monea.variable}`}>{children}</body>
     </html>
   );
 }

@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        monea: ['var(--font-monea)']
+        monea: ['var(--font-monea)'],
+        roboto: ['var(--font-roboto)']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
