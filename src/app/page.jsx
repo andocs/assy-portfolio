@@ -370,7 +370,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full"
                       src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
-                      alt=""
                     />
                   </div>
 
@@ -378,9 +377,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full"
                       src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
-                      alt=""
-                      sizes=""
-                      srcset=""
                     />
                   </div>
 
@@ -388,7 +384,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full pl-6"
                       src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
-                      alt=""
                     />
                   </div>
                 </div>
@@ -405,7 +400,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full"
                       src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
-                      alt=""
                     />
                   </div>
 
@@ -413,9 +407,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full"
                       src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
-                      alt=""
-                      sizes=""
-                      srcset=""
                     />
                   </div>
 
@@ -423,7 +414,6 @@ export default function Home() {
                     <img
                       className="object-cover w-full h-full pl-6"
                       src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
-                      alt=""
                     />
                   </div>
                 </div>
@@ -435,7 +425,7 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="flex w-full border-t border-[#E0A701]">
+          <div className="flex w-full items-center border-t border-[#E0A701]">
             {/* Two-Row Wrapper */}
             <div className="flex w-full flex-col gap-4 px-10">
               {/* Row 1 Wrapper */}
@@ -450,7 +440,7 @@ export default function Home() {
                   <div className="flex flex-col w-full gap-4">
                     <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" id="name" placeholder="Name" />
                     <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"  type="email" id="email" placeholder="E-Mail" />
-                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" inputmode="numeric" id="phone" placeholder="Phone Number" />
+                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" inputMode="numeric" id="phone" placeholder="Phone Number" />
                   </div>
                   {/* Text Group 2 */}
                   <div className="w-full h-full">
@@ -459,16 +449,18 @@ export default function Home() {
                 </div>
               </div>
               {/* Row 2 */}
-              <div className="w-full flex pr-5 justify-end pb-24">
+              <div className="w-full flex pr-5 justify-end pb-12">
                 <button className="font-roboto font-light bg-[#E0A701] text-black px-8 py-1 rounded-md">
                   Send
                 </button>
               </div>
             </div>
           </div>
+
         </section>
+
+        <img className="absolute -bottom-40 -left-40 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
         
-        <img className="absolute -bottom-28 -left-40 -z-10 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
       </main>
 
       {/* FOOTER */}
