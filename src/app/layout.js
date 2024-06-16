@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth josefin">
-      <body className={`${josefin.className} ${roboto.variable} ${monea.variable}`}>{children}</body>
+      <body className={`${josefin.className} ${roboto.variable} ${monea.variable} relative`}>{children}</body>
     </html>
   );
 }

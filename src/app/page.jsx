@@ -1,4 +1,16 @@
-import Image from "next/image";
+'use client'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import MultipleItems from "./multiple-slider.component";
+
+const images = [
+  'https://s3-alpha-sig.figma.com/img/f9e4/ad74/eb9b986d61280e513be9fa0c661af2f4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Sb~ODGJPE0-qHmJ02tkesmW9q1Rncffx9dBtK5XsULC45tUkOIKye14UOPDzSjs8nfLbfCEHCgAUMVYpK1RTCQm1rFd27i9bj3F84ySbQJx3HSNH4LqT3lwaaTuWFqf3TlC9KYQGF~huhknnsRv0XwJRn6xkm0wjVSuLcas18dYJGgE0QYQLRcWNqXoHUgUpW5CWgzxOPQ1LNHm3yf1D5LgkDpW9HyZnR~KriPCLNqcchcAuustVK2KFDgapomPbv-XH7EPtauneGoId1KdbndMVHZPyamoz~RixtNoBNZCZ-FPaHp-uwZIG-ucjyneqwCKQXDqHzQYbOwTLHxCtXA__',
+  'https://s3-alpha-sig.figma.com/img/89f3/4213/72dd242e176a9bf174befc9fcf45a7b3?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PQtEk8cxg4hRRlqmNC0Ic63~PgXIcQTM-t6CcmxPmq5cHT8chmYmKCa72mb4PKYi-DwhrMAtoZv1jhe3LuT51hmvoYzOBdved2kxC7CWcbviEdtcgfarqivjX3deHp7rKL1QytFivtcrasXeCmx-UyB1elP344d7zwdnqE7~bdUW4iWOdk2EvbCtIO0JZ5XsHP3InSPQpqG9XGmQi1OfG~Be-bPZf9aRKlScxWF5HkZmk2Yp3lV9hPSuL9huA~uqraN7PQMjEasYivSwf-YcmmnLOQ1mfbYWzsE4C~M0fw1qn0bE1rkYbBU6oSqovUXGTYzUFcu3NL6oSSHYXjsQYw__',
+  'https://s3-alpha-sig.figma.com/img/f192/2d76/396a000931d58830c6ad61e5c44b88c8?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KTsBMmNXeT06PLwGNVIzmnfC7DrOQZMcRk0FDv~5lXrLQ5aqBmxSQMY6AQgi5xnJX1s4gOyAOBlkoMHJoQcYFTEstTHzrKmxyACiieQmpG~pVzkyLVpof7o8TsvrpxKfvnsZEFgP4ntYCYz0U-IfZeula-amuYaTH26Yn7DzFbLPgcSfS3smJdQfdi2Vo-av5urdqD-Y1vzhltX6hfLOouvltumhYSBTvz-6oVg4Pwb0OTFbYup2rxeSq0macIkKCkCo4zzyMNSwufO3DHT38feJe9ILS9sAfEqRw5tixd~jz7CAvfUPxB-kYwDyIBTbC~YQhL00w9nCHiOy-a93wA__',
+  'https://s3-alpha-sig.figma.com/img/5dcd/1e38/2bcde949631b0fa52e7d2dc02594e8fa?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bno5cztA95B0HGFs32oH5qd-Ag2SBwPD8yAeXbs7CgBrGBeiNL3GkaP3qf0sHmPaenSSuOqFSKnQw9z8~SfHL2nQ0mVNKuYUr-Pc8JPkYqWiBVIGx3VZnctyXA3k3OW1t~dU9FUx1PYJHlXvX5Vk2vCbVCOGyhHRZhql1mF~~aLvhbUyVmZ8lcBW66ei0~DOoHB-v5rVFbh5MOQ6logy5GNmqmx4Gi4PmWYIud8ByLsVNMMBPKWM7S~ECdDhT6vuCKJ1IdOmol4AKm7eVGdzS94ThRcrTRiyb1nTt9tfZuf-U3LaS1~eJ-eHVmGgMA3ISmTkjTJn8Q6IqY6BXt~Y2w__'
+];
 
 export default function Home() {
   return (
@@ -354,7 +366,7 @@ export default function Home() {
         {/* PROJECT SECTION */}
         <section id="project" className="scroll-mt-[9rem]">
           {/* Section Wrapper */}
-          <div className="min-h-screen">
+          <div className="pt-16 min-h-screen">
             {/* Section Header */}
             <div className="w-full">
               <h2 className="text-5xl font-bold">MY PROJECT</h2>
@@ -398,7 +410,12 @@ export default function Home() {
                   <p>Photography</p>
                 </div>
                 {/* Row 2 Image Wrapper */}
-                <div className="grid grid-cols-3 justify-center items-center gap-5">
+                <MultipleItems slides={images}>
+                  {/* <img src="" alt="" /> */}
+
+                </MultipleItems>
+
+                {/* <div className="grid grid-cols-3 justify-center items-center gap-5">
                   <div className="w-full h-full bg-[url('/assets/img1-bg.jfif')] bg-cover">
                     <img
                       className="object-cover w-full h-full"
@@ -419,14 +436,14 @@ export default function Home() {
                       src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className="scroll-mt-[6.5rem]">
+        <section id="contact">
           {/* Section Wrapper */}
           <div className="flex w-full items-center border-t border-[#E0A701]">
             {/* Two-Row Wrapper */}
@@ -462,9 +479,9 @@ export default function Home() {
 
         </section>
 
-        <img className="absolute -bottom-40 -left-40 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
-        
       </main>
+
+      <img className="absolute bottom-0 -left-40 -z-10 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
 
       {/* FOOTER */}
       <footer className="w-full bg-[#4F3B00] h-20">
