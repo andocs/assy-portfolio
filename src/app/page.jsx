@@ -5,11 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 import MultipleItems from "./multiple-slider.component";
 
-const images = [
-  'https://s3-alpha-sig.figma.com/img/f9e4/ad74/eb9b986d61280e513be9fa0c661af2f4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Sb~ODGJPE0-qHmJ02tkesmW9q1Rncffx9dBtK5XsULC45tUkOIKye14UOPDzSjs8nfLbfCEHCgAUMVYpK1RTCQm1rFd27i9bj3F84ySbQJx3HSNH4LqT3lwaaTuWFqf3TlC9KYQGF~huhknnsRv0XwJRn6xkm0wjVSuLcas18dYJGgE0QYQLRcWNqXoHUgUpW5CWgzxOPQ1LNHm3yf1D5LgkDpW9HyZnR~KriPCLNqcchcAuustVK2KFDgapomPbv-XH7EPtauneGoId1KdbndMVHZPyamoz~RixtNoBNZCZ-FPaHp-uwZIG-ucjyneqwCKQXDqHzQYbOwTLHxCtXA__',
-  'https://s3-alpha-sig.figma.com/img/89f3/4213/72dd242e176a9bf174befc9fcf45a7b3?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PQtEk8cxg4hRRlqmNC0Ic63~PgXIcQTM-t6CcmxPmq5cHT8chmYmKCa72mb4PKYi-DwhrMAtoZv1jhe3LuT51hmvoYzOBdved2kxC7CWcbviEdtcgfarqivjX3deHp7rKL1QytFivtcrasXeCmx-UyB1elP344d7zwdnqE7~bdUW4iWOdk2EvbCtIO0JZ5XsHP3InSPQpqG9XGmQi1OfG~Be-bPZf9aRKlScxWF5HkZmk2Yp3lV9hPSuL9huA~uqraN7PQMjEasYivSwf-YcmmnLOQ1mfbYWzsE4C~M0fw1qn0bE1rkYbBU6oSqovUXGTYzUFcu3NL6oSSHYXjsQYw__',
-  'https://s3-alpha-sig.figma.com/img/f192/2d76/396a000931d58830c6ad61e5c44b88c8?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KTsBMmNXeT06PLwGNVIzmnfC7DrOQZMcRk0FDv~5lXrLQ5aqBmxSQMY6AQgi5xnJX1s4gOyAOBlkoMHJoQcYFTEstTHzrKmxyACiieQmpG~pVzkyLVpof7o8TsvrpxKfvnsZEFgP4ntYCYz0U-IfZeula-amuYaTH26Yn7DzFbLPgcSfS3smJdQfdi2Vo-av5urdqD-Y1vzhltX6hfLOouvltumhYSBTvz-6oVg4Pwb0OTFbYup2rxeSq0macIkKCkCo4zzyMNSwufO3DHT38feJe9ILS9sAfEqRw5tixd~jz7CAvfUPxB-kYwDyIBTbC~YQhL00w9nCHiOy-a93wA__',
-  'https://s3-alpha-sig.figma.com/img/5dcd/1e38/2bcde949631b0fa52e7d2dc02594e8fa?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bno5cztA95B0HGFs32oH5qd-Ag2SBwPD8yAeXbs7CgBrGBeiNL3GkaP3qf0sHmPaenSSuOqFSKnQw9z8~SfHL2nQ0mVNKuYUr-Pc8JPkYqWiBVIGx3VZnctyXA3k3OW1t~dU9FUx1PYJHlXvX5Vk2vCbVCOGyhHRZhql1mF~~aLvhbUyVmZ8lcBW66ei0~DOoHB-v5rVFbh5MOQ6logy5GNmqmx4Gi4PmWYIud8ByLsVNMMBPKWM7S~ECdDhT6vuCKJ1IdOmol4AKm7eVGdzS94ThRcrTRiyb1nTt9tfZuf-U3LaS1~eJ-eHVmGgMA3ISmTkjTJn8Q6IqY6BXt~Y2w__'
+const designImages = [
+  '/assets/design_1.png','/assets/design_2.png','/assets/design_3.png'
+];
+
+const photogImages = [
+  '/assets/slide-1.jfif','/assets/slide-2.jfif','/assets/slide-3.jfif','/assets/slide-4.jfif'
 ];
 
 export default function Home() {
@@ -303,7 +304,7 @@ export default function Home() {
                       <p className="text-[#383836] text-2xl font-semibold w-11/12">
                         There are many elements in photography that come
                         together to make an image be considered “good”. Some of
-                        these elements include, but are not limited to lighting,
+                        these elements include, but are not limited to lighting,
                         the rule of thirds, lines, shapes, texture, patterns,
                         and color.
                       </p>
@@ -380,28 +381,8 @@ export default function Home() {
                   <p>Website and Mobile Application Design</p>
                 </div>
                 {/* Row 1 Image Wrapper */}
-                <div className="grid grid-cols-3 justify-center items-center gap-5">
-                  <div className="w-full h-full bg-[url('/assets/img1-bg.jfif')] bg-cover">
-                    <img
-                      className="object-cover w-full h-full"
-                      src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
-                    />
-                  </div>
-
-                  <div className="w-full h-full">
-                    <img
-                      className="object-cover w-full h-full"
-                      src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
-                    />
-                  </div>
-
-                  <div className="w-full h-full bg-[url('/assets/img2-bg.jfif')] bg-cover">
-                    <img
-                      className="object-cover w-full h-full pl-6"
-                      src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
-                    />
-                  </div>
-                </div>
+                <MultipleItems slides={designImages} show={2} scroll={1}>
+                </MultipleItems>
               </div>
               {/* Row 2 - Photography  */}
               <div className="pb-28">
@@ -410,33 +391,8 @@ export default function Home() {
                   <p>Photography</p>
                 </div>
                 {/* Row 2 Image Wrapper */}
-                <MultipleItems slides={images}>
-                  {/* <img src="" alt="" /> */}
-
+                <MultipleItems slides={photogImages} show={2} scroll={1}>
                 </MultipleItems>
-
-                {/* <div className="grid grid-cols-3 justify-center items-center gap-5">
-                  <div className="w-full h-full bg-[url('/assets/img1-bg.jfif')] bg-cover">
-                    <img
-                      className="object-cover w-full h-full"
-                      src="https://s3-alpha-sig.figma.com/img/b095/8f44/ab1c931d8a24bf3045a9e289cbd04079?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PF1Z13t9cjok~BTzIw3E~g76csfJNpUGPFbSCi9gBbeSYiSZqKmqx~-KVQEeL1anvmkJ9jeSSbVNrakZ1NL8PT7ErUb3~zhpIWFrb0iMWzC5n4nTT66E53DNVnzpSs9GOKpsBZq1EFPL6M2iOFZbyP-zGW0haOTL4kufEyRFI7ckTkvDpX3PiPJGIaOdVQXvof3cFA-CX7Krj~YN~RTg~JsI0cgpJygl0Z9kTmGN5ZVhPdSjY~5wtPlkfJuOegYHIUcO0A0BROThBdjobOODS5eYCN7TieOlPyUjuIO6gDCp~jra4ryJEnAO4sB2F1-b4fNI0AaOoQcOzMQSYtgB5g__"
-                    />
-                  </div>
-
-                  <div className="w-full h-full">
-                    <img
-                      className="object-cover w-full h-full"
-                      src="https://s3-alpha-sig.figma.com/img/8a0b/0629/de8a26b11bf4b76e02c91aa70b01571e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QQZqBrPi32EJii~NGLr0JHwRgwD2-NmOKh1LTIlNj-beStEDCE0S8wELF2uZDfg~5HS9c-ox1bpNyUPdzfSY~QZQ2Cigv8ly2-4DAVyYUo9MSQVnk8PiVdGM4j-Qx3TGmfaPsBKT3mf~Bzoda6lXdnABaRcAi1ZSZh7dLvjHiYMXe43TOcdLLY4YA9kgV7G4qfHWmna1Ou3ANHhWr2gbujGoT3HbxenvFfyGIy1UW9JWsW5H6yDq~JA1Ccv~XWgzlrPPX~8YCNkWB9o7xe1Aam7NNayhdCX~fbAJYbIXmOb8jPg4sXaLLCNuyIgrHsWKOcDFeSmbeEM9csCiwrkUbA__"
-                    />
-                  </div>
-
-                  <div className="w-full h-full bg-[url('/assets/img2-bg.jfif')] bg-cover">
-                    <img
-                      className="object-cover w-full h-full pl-6"
-                      src="https://s3-alpha-sig.figma.com/img/970f/025c/adbcf5056060200d208491904906c265?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfWnsO7KubBJtObPrFo6KYXlbUwzlAU4wwIQjg6tJz92Raw~VL22SvJw5JMK1HViukp~t9HA8SMn2iVk4tiwsOZKdYAaWhmDbhfY8Y3a0aXf4NN6d~nzMCSqfANS8W9asE1icuAiCu7wkmevSKrTV0H~aBv34T0grXGnyvn~4PbyhHgg7p2fsMkJdk8tZ2XkbfDtVNr61x6n07QexwfrjvXnXiJWQN3-dgl8-gZv0JpZxgkOaZcut~SvjtSgMhkeYGCwakc3-CszXIX2g2funeKxfM2VzH4HAGkm7ASvwhXSG~P9rSxEp3gF3zMXQDfAb~j0qScfgeWCDE1gRwOkyQ__"
-                    />
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -481,7 +437,7 @@ export default function Home() {
 
       </main>
 
-      <img className="absolute bottom-0 -left-40 -z-10 opacity-5 w-[840px]" src="https://s3-alpha-sig.figma.com/img/7da0/e629/c6e4ca599a048298830ce362ec5e3d5a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f9bFExmHfWM7I9RipLCSNZaHgyWENaXSqlMv~RS8j5sWb58NqtAVrSPzdxsTHPq1f8AWchdoZMnF1lWO2igmnlceFe8FF~2ARwHxtXW4wjfu-phG~QrQxX0mAoXxXA8ZME4cLaPjbQIR5G1L0FM8tHxuizz6APhHLDKvDpkSBBscLVm-zE--WV~FgSgUMZDeL7KmP4MukZD2S7XKDeDReT08EmbvcfRsvmewHgUsH9rkqS-r9qp4u3Xlzya39c2McomCtjNYY8NiBLAzIDcBRUQFtGA2PGJQjHsHjRTTFqp4g8OlNseeWIk9QoUDGpV6sYFHRcc9O9TG-E2nndQ~lQ__" alt="" />
+      <img className="absolute bottom-0 -left-40 -z-10 opacity-5 w-[840px]" src="/assets/assy-logo.png" alt="" />
 
       {/* FOOTER */}
       <footer className="w-full bg-[#4F3B00] h-20">
