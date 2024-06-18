@@ -1,37 +1,63 @@
-'use client'
+"use client";
+
+import { useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MultipleItems from "./multiple-slider.component";
+import MobileNavigation from "./mobile-navigation.component";
 
 const designImages = [
-  '/assets/design_1.png','/assets/design_2.png','/assets/design_3.png'
+  "/assets/design_1.png",
+  "/assets/design_2.png",
+  "/assets/design_3.png",
 ];
 
 const photogImages = [
-  '/assets/slide-1.jfif','/assets/slide-2.jfif','/assets/slide-3.jfif','/assets/slide-4.jfif'
+  "/assets/slide-1.jfif",
+  "/assets/slide-2.jfif",
+  "/assets/slide-3.jfif",
+  "/assets/slide-4.jfif",
 ];
 
 export default function Home() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const toggleNav = () => {
+    setIsNavOpen((prevState) => !prevState);
+};
+
   return (
     <>
+      {/* MOBILE NAV  */}
+      <MobileNavigation closeNav={toggleNav} isOpen={isNavOpen} />
+
       {/* HEADER  */}
       <header
         id="nav"
-        className="sticky w-full top-0 bg-[#222222] lg:pt-5 z-50 px-2 sm:px-6 lg:px-20"
+        className="sticky w-full top-0 bg-[#222222] pt-5 z-40 sm:px-14 lg:px-20"
       >
         <div className="relative flex h-20 pb-4 flex-row justify-between">
           <div className="flex">
             <a href="#main">
-            <img
-              src="/assets/assy-logo.png"
-              alt=""
-              className="h-full"
-            />
+              <img src="/assets/assy-logo.png" alt="" className="h-full" />
             </a>
           </div>
-          <div className="flex items-center">
+
+          <div className="flex md:hidden">
+            <button onClick={toggleNav}>
+              <svg
+                className="w-12"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="rgba(224,167,1,1)"
+              >
+                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div className="md:flex items-center sm:hidden">
             <ul className="flex flex-row space-x-6 text-[#E0A701]">
               <a href="#main">
                 <li>HOME</li>
@@ -54,14 +80,17 @@ export default function Home() {
       </header>
 
       {/* CONTENT */}
-      <main className="relative mx-auto px-2 sm:px-6 lg:px-20 overflow-hidden">
+      <main className="relative mx-auto px-6 sm:px-14 lg:px-20 overflow-clip">
+        {/* Lines */}
+        <hr className="absolute bg-gradient-to-r from-[#E0A701] to-[#7A5B01] border-0 h-[1px] w-[281px] top-0 left-0 md:top-8 md:right-0" />
         {/* MAIN SECTION */}
-        <section id="main" className="border-t border-[#E0A701]">
+        <section id="main" className="scroll-mt-20 border-none md:border-solid md:border-t md:border-[#E0A701]">
           {/* Wrapper */}
-          <div className="mt-6">
-            <div className="w-full min-h-screen flex flex-row justify-between">
+          <div className="pt-6 w-full flex justify-between items-center lg:items-stretch lg:h-screen">
+            <div className="flex w-full flex-col-reverse md:flex-row md:absolute">
+              
               {/* Left Column - Name with Social Media */}
-              <div className="flex flex-col justify-center">
+              <div className="w-1/2 flex-none flex flex-col justify-center">
                 <p className="text-xl">HELLO , I’M</p>
                 <p className="font-monea text-9xl">Alyssa Gerez</p>
                 {/* ICONS */}
@@ -118,58 +147,16 @@ export default function Home() {
                 </div>
               </div>
               {/* Right Column */}
-              <div className="relative">
-                {/* SVG Wrapper */}
-                <div className="absolute right-0">
-                  <svg
-                    width="797"
-                    height="550"
-                    viewBox="0 0 797 550"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="536"
-                      y1="0.5"
-                      x2="797"
-                      y2="0.499977"
-                      stroke="url(#paint0_linear_0_1)"
-                    />
-                    <line
-                      x1="3.16695e-10"
-                      y1="549.5"
-                      x2="250"
-                      y2="549.5"
-                      stroke="url(#paint1_linear_0_1)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_1"
-                        x1="536"
-                        y1="1.5"
-                        x2="797"
-                        y2="1.49998"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.51" stopColor="#E0A701" />
-                        <stop offset="1" stopColor="#7A5B01" />
-                      </linearGradient>
-                      <linearGradient
-                        id="paint1_linear_0_1"
-                        x1="3.16695e-10"
-                        y1="550.5"
-                        x2="250"
-                        y2="550.5"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.51" stopColor="#E0A701" />
-                        <stop offset="1" stopColor="#7A5B01" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
+              <div className="w-full h-full flex justify-center items-center md:w-1/2 md:relative">
                 {/* Kulot pic */}
-                <img src="./assets/alyssa_main.png" alt="" />
+                <div className="md:relative">
+                  <img
+                    className="w-full"
+                    src="./assets/alyssa_main.png"
+                    alt=""
+                  />
+                  <hr className="absolute bottom-10 right-0 bg-gradient-to-r from-[#E0A701] to-[#7A5B01] border-0 h-[1px] w-[317px] md:-left-40" />
+                </div>
               </div>
             </div>
           </div>
@@ -178,7 +165,7 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section id="about" className="scroll-mt-[6.5rem]">
           {/* Section Wrapper */}
-          <div className="min-h-screen flex flex-col">
+          <div className="h-screen flex flex-col">
             {/* Section Header */}
             <div className="w-full border-t border-[#E0A701]">
               <p>FREELANCE</p>
@@ -187,11 +174,11 @@ export default function Home() {
             <div className="flex flex-row my-auto">
               {/* Column 1 - About Me*/}
               <div className="w-1/3">
-                <h2 className="text-5xl font-bold">ABOUT ME</h2>
+                <h2 className="text-3xl font-bold lg:text-5xl">ABOUT ME</h2>
               </div>
               {/* Column 2 - Description*/}
               <div className="w-2/3 space-y-8">
-                <p className="text-2xl font-light">
+                <p className="text-lg font-light lg:text-2xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -201,7 +188,7 @@ export default function Home() {
                   cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum.
                 </p>
-                <p className="text-2xl font-light">
+                <p className="text-lg font-light lg:text-2xl">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam, eaque
                   ipsa quae ab illo inventore veritatis et quasi architecto
@@ -212,7 +199,7 @@ export default function Home() {
                 </p>
                 <a
                   href=""
-                  className="p-0 items-center justify-start text-[#E0A701] text-xl w-fit flex flex-row relative after:bg-[#E0A701] after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 "
+                  className="p-0 items-center justify-start text-[#E0A701] text-sm w-fit flex flex-row relative after:bg-[#E0A701] after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 lg:text-xl"
                 >
                   Read More{" "}
                   <svg
@@ -237,17 +224,17 @@ export default function Home() {
             <div className="flex flex-col pb-20 border-b border-[#E0A701]">
               {/* Header - Service */}
               <div className="w-1/3">
-                <h2 className="text-5xl font-bold">SERVICE</h2>
+                <h2 className="text-3xl font-bold lg:text-5xl">SERVICE</h2>
               </div>
 
               {/* Cards Section */}
-              <div className="flex flex-row mt-4 justify-evenly space-x-16">
+              <div className="flex flex-col mt-4 justify-evenly items-center space-x-0 gap-20 lg:flex-row lg:gap-0 lg:space-x-16 lg:items-start">
                 {/* Card 1 */}
-                <div className="bg-[#383836] min-h-[500px] h-[500px] w-auto mt-6 rounded-lg flex flex-col p-6 justify-between">
+                <div className="bg-[#383836] w-2/3 mt-6 rounded-lg flex flex-col p-6 justify-between lg:gap-2 lg:w-1/3 lg:flex-auto">
                   {/* Computer Icon */}
-                  <div className="flex justify-end">
+                  <div className="flex justify-center lg:justify-end">
                     <svg
-                      className="w-16"
+                      className="w-64 lg:w-16"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -259,14 +246,19 @@ export default function Home() {
                   {/* Text Group */}
                   <div className="space-y-6 pb-10">
                     {/* Website Design Header  */}
-                    <div>
-                      <h1 className="text-5xl font-bold break-words">
+                    <div className="flex justify-center lg:block lg:justify-normal">
+                      <h1 className="hidden text-2xl font-bold break-words lg:block xl:text-4xl">
                         WEBSITE
                       </h1>
-                      <h1 className="text-5xl font-bold break-words">DESIGN</h1>
+                      <h1 className="hidden text-2xl font-bold break-words lg:block xl:text-4xl">
+                        DESIGN
+                      </h1>
+                      <h1 className="flex text-2xl font-bold break-words lg:hidden xl:text-3xl">
+                        WEBSITE DESIGN
+                      </h1>
                     </div>
 
-                    <p className="text-[#906B00] text-xl">
+                    <p className="text-[#906B00] text-base px-6 lg:px-0">
                       There are many elements in photography that come together
                       to make an image be considered “good”. Some of these
                       elements include, but are not limited to lighting, the
@@ -277,13 +269,13 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 Wrapper */}
-                <div className="flex flex-col w-auto relative h-full justify-evenly">
+                <div className="flex flex-col w-auto relative items-center h-full justify-evenly lg:items-baseline lg:w-1/3">
                   {/* Card 2 */}
-                  <div className="bg-[#E0A701] min-h-[550px] rounded-lg flex flex-col p-6 justify-between">
+                  <div className="bg-[#E0A701] h-auto gap-0 w-2/3 rounded-lg flex flex-col p-6 lg:justify-between lg:gap-2 lg:w-full">
                     {/* Camera Icon */}
-                    <div className="flex justify-end">
+                    <div className="flex justify-center lg:justify-end">
                       <svg
-                        className="w-16"
+                        className="w-64 lg:w-16"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="rgba(53,53,53,1)"
@@ -293,15 +285,15 @@ export default function Home() {
                     </div>
 
                     {/* Text Group */}
-                    <div className="space-y-6 pb-14">
+                    <div className="space-y-6 pb-10">
                       {/* Website Design Header */}
-                      <div>
-                        <h1 className="text-[#383836] text-6xl font-bold break-words">
+                      <div className="flex justify-center lg:block">
+                        <h1 className="text-[#383836] text-3xl font-bold break-words xl:text-4xl">
                           PHOTOGRAPHY
                         </h1>
                       </div>
 
-                      <p className="text-[#383836] text-2xl font-semibold w-11/12">
+                      <p className="text-[#383836] text-base px-6 w-full font-semibold lg:px-0 lg:text-xl  lg:w-11/12">
                         There are many elements in photography that come
                         together to make an image be considered “good”. Some of
                         these elements include, but are not limited to lighting,
@@ -311,7 +303,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* Button */}
-                  <div className="mt-6 w-full flex justify-center items-center space-x-6">
+                  <div className="hidden mt-6 w-full justify-center items-center space-x-6 lg:flex">
                     <button className="bg-[#E0A701] py-3 px-5 justify-center text-black text-xl rounded-md w-auto flex flex-row">
                       BOOK SERVICE{" "}
                       <svg
@@ -327,11 +319,11 @@ export default function Home() {
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-[#383836] min-h-[500px] h-[500px] w-auto mt-6 rounded-lg flex flex-col p-6 justify-between">
+                <div className="bg-[#383836] w-2/3 mt-6 rounded-lg flex flex-col p-6 justify-between lg:gap-2 lg:w-1/3 lg:flex-auto">
                   {/* Computer Icon */}
-                  <div className="flex justify-end">
+                  <div className="flex justify-center lg:justify-end">
                     <svg
-                      className="w-16"
+                      className="w-64 lg:w-16"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -342,15 +334,20 @@ export default function Home() {
 
                   {/* Text Group */}
                   <div className="space-y-6 pb-10">
-                    {/* Card Header */}
-                    <div>
-                      <h1 className="text-5xl font-bold break-words">
+                    {/* Website Design Header  */}
+                    <div className="flex justify-center lg:block lg:justify-normal">
+                      <h1 className="hidden text-2xl font-bold break-words lg:block xl:text-4xl">
                         MOBILE APP
                       </h1>
-                      <h1 className="text-5xl font-bold break-words">DESIGN</h1>
+                      <h1 className="hidden text-2xl font-bold break-words lg:block xl:text-4xl">
+                        DESIGN
+                      </h1>
+                      <h1 className="flex text-2xl font-bold break-words lg:hidden xl:text-3xl">
+                        MOBILE APP DESIGN
+                      </h1>
                     </div>
 
-                    <p className="text-[#906B00] text-xl">
+                    <p className="text-[#906B00] text-base px-6 lg:px-0">
                       There are many elements in photography that come together
                       to make an image be considered “good”. Some of these
                       elements include, but are not limited to lighting, the
@@ -358,6 +355,21 @@ export default function Home() {
                       color.
                     </p>
                   </div>
+                </div>
+
+                {/* Button (Responsive) */}
+                <div className="flex mt-6 w-full justify-center items-center space-x-6 lg:hidden">
+                  <button className="bg-[#E0A701] py-3 px-5 justify-center text-black text-xl rounded-md w-auto flex flex-row">
+                    BOOK SERVICE{" "}
+                    <svg
+                      className="w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -370,29 +382,35 @@ export default function Home() {
           <div className="pt-16 min-h-screen">
             {/* Section Header */}
             <div className="w-full">
-              <h2 className="text-5xl font-bold">MY PROJECT</h2>
+              <h2 className="text-3xl font-bold lg:text-5xl">MY PROJECT</h2>
             </div>
             {/* Two-Row Wrapper */}
             <div className="flex flex-col space-y-12">
               {/* Row 1 - Web and Mobile App Design  */}
               <div>
                 {/* Row 1 Header Wrapper  */}
-                <div className="flex flex-row w-full justify-center text-2xl pb-10">
+                <div className="flex text-xl flex-row w-full justify-center lg:text-2xl pb-10">
                   <p>Website and Mobile Application Design</p>
                 </div>
                 {/* Row 1 Image Wrapper */}
-                <MultipleItems slides={designImages} show={2} scroll={1}>
-                </MultipleItems>
+                <MultipleItems
+                  slides={designImages}
+                  show={2}
+                  scroll={1}
+                ></MultipleItems>
               </div>
               {/* Row 2 - Photography  */}
               <div className="pb-28">
                 {/* Row 2 Header Wrapper  */}
-                <div className="flex flex-row w-full justify-center text-2xl pb-10">
+                <div className="flex text-xl flex-row w-full justify-center lg:text-2xl pb-10">
                   <p>Photography</p>
                 </div>
                 {/* Row 2 Image Wrapper */}
-                <MultipleItems slides={photogImages} show={2} scroll={1}>
-                </MultipleItems>
+                <MultipleItems
+                  slides={photogImages}
+                  show={2}
+                  scroll={1}
+                ></MultipleItems>
               </div>
             </div>
           </div>
@@ -414,13 +432,34 @@ export default function Home() {
                 <div className="w-2/3 flex gap-10 px-5">
                   {/* Text Group 1 Wrapper */}
                   <div className="flex flex-col w-full gap-4">
-                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" id="name" placeholder="Name" />
-                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"  type="email" id="email" placeholder="E-Mail" />
-                    <input className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]" type="text" inputMode="numeric" id="phone" placeholder="Phone Number" />
+                    <input
+                      className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"
+                      type="text"
+                      id="name"
+                      placeholder="Name"
+                    />
+                    <input
+                      className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"
+                      type="email"
+                      id="email"
+                      placeholder="E-Mail"
+                    />
+                    <input
+                      className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto rounded-md py-4 px-5 bg-[#363131]"
+                      type="text"
+                      inputMode="numeric"
+                      id="phone"
+                      placeholder="Phone Number"
+                    />
                   </div>
                   {/* Text Group 2 */}
                   <div className="w-full h-full">
-                    <textarea className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto bg-[#363131] rounded-md py-3 px-4 w-full h-full resize-none" name="message" id="message" placeholder="Message"></textarea>
+                    <textarea
+                      className="placeholder:text-[#E0A701] placeholder:font-light placeholder:font-roboto bg-[#363131] rounded-md py-3 px-4 w-full h-full resize-none"
+                      name="message"
+                      id="message"
+                      placeholder="Message"
+                    ></textarea>
                   </div>
                 </div>
               </div>
@@ -432,36 +471,83 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </section>
-
       </main>
 
-      <img className="absolute bottom-0 -left-40 -z-10 opacity-5 w-[840px]" src="/assets/assy-logo.png" alt="" />
+      <img
+        className="absolute bottom-0 -left-40 -z-10 opacity-5 w-[840px]"
+        src="/assets/assy-logo.png"
+        alt=""
+      />
 
       {/* FOOTER */}
       <footer className="w-full bg-[#4F3B00] h-20">
         {/* FOOTER WRAPPER */}
-        <div className="flex h-full justify-center items-center gap-20">
+        <div className="h-full overflow-hidden grid grid-cols-2 md:justify-center md:items-center md:gap-10 md:flex lg:gap-20">
           {/* E-MAIL */}
-          <div className="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path></svg>
-            <p className="font-roboto font-light opacity-50">yssagerez15@gmail.com</p>
+          <div className="flex gap-1 lg:gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 lg:w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#E0A701"
+            >
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
+            </svg>
+            <p className="font-roboto font-light opacity-50 text-sm lg:text-base">
+              yssagerez15@gmail.com
+            </p>
           </div>
           {/* INSTAGRAM */}
-          <div className="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"></path><circle cx="11.994" cy="11.979" r="3.003"></circle></svg>
-            <p className="font-roboto font-light opacity-50">@yssacreatives / uiyssacreative</p>
+          <div className="flex gap-1 lg:gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 lg:w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#E0A701"
+            >
+              <path d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"></path>
+              <circle cx="11.994" cy="11.979" r="3.003"></circle>
+            </svg>
+            <p className="font-roboto font-light opacity-50 text-sm lg:text-base">
+              @yssacreatives / uiyssacreative
+            </p>
           </div>
           {/* FACEBOOK */}
-          <div className="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>
-            <p className="font-roboto font-light opacity-50">Yssa Creatives</p>
+          <div className="flex gap-1 lg:gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 lg:w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#E0A701"
+            >
+              <path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path>
+            </svg>
+            <p className="font-roboto font-light opacity-50 text-sm lg:text-base">
+              Yssa Creatives
+            </p>
           </div>
           {/* PHONE */}
-          <div className="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E0A701"><path d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"></path></svg>
-            <p className="font-roboto font-light opacity-50">09062428185 / 09760535896</p>
+          <div className="flex gap-1 lg:gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 lg:w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#E0A701"
+            >
+              <path d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"></path>
+            </svg>
+            <p className="font-roboto font-light opacity-50 text-sm lg:text-base">
+              09062428185 / 09760535896
+            </p>
           </div>
         </div>
       </footer>
