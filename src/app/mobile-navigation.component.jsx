@@ -1,6 +1,6 @@
 function MobileNavigation({ closeNav, isOpen }) {
   return (
-    <div className={`flex fixed flex-col w-1/2 h-full z-50 right-0 bg-[#222222] border-l border-[#E0A701] px-12 py-8 gap-10 pr-6 md:hidden duration-500 ease-in-out ${isOpen?"translate-x-0":"translate-x-full"}`}>
+    <div className={`flex fixed flex-col w-[300px] h-full z-50 right-0 bg-[#222222] border-l border-[#E0A701] px-12 py-8 gap-10 pr-6 md:hidden duration-500 ease-in-out ${isOpen?"translate-x-0":"translate-x-full"}`}>
       <div className="flex justify-end">
         <button onClick={closeNav}>
           <svg
@@ -16,16 +16,16 @@ function MobileNavigation({ closeNav, isOpen }) {
 
       <div>
         <ul className="text-4xl gap-10 flex flex-col">
-          <a href="#main">
+          <a onClick={closeNav} href="#main">
             <li>HOME</li>
           </a>
-          <a href="#about">
+          <a onClick={closeNav} href="#about">
             <li>ABOUT</li>
           </a>
-          <a href="#project">
+          <a onClick={closeNav} href="#project">
             <li>PROJECT</li>
           </a>
-          <a href="#contact">
+          <a onClick={closeNav} href="#contact">
             <li>CONTACT</li>
           </a>
         </ul>

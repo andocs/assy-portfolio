@@ -22,7 +22,7 @@ function MultipleItems({ slides, show, scroll }) {
   };  
 
   return (
-    <div className="slider-container">
+    <div className="slider-container px-6 md:px-0">
       <Slider {...settings} className="flex gap-5">
         {slides.map((slide, slideIndex) => {
           return (
