@@ -559,7 +559,7 @@ export default function Home() {
       </footer>
 
       {/* MOBILE FOOTER */}
-      <footer className="w-full min-h-[500px] flex justify-center md:hidden bg-[url('/assets/mobile-footer__ellipse.png')] bg-[length:1000px_700px] bg-no-repeat bg-top">
+      <footer id="contact" className="w-full min-h-[500px] flex justify-center md:hidden bg-[url('/assets/mobile-footer__ellipse.png')] bg-[length:1000px_700px] bg-no-repeat bg-top">
         {/* FOOTER WRAPPER */}
         <div className="flex flex-col items-center gap-10">
           {/* BUTTON WRAPPER */}
